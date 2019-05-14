@@ -1,6 +1,5 @@
 package com.shohagh.springboottest.controllers;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,8 +10,8 @@ public class MailController {
 
 	private MailSender mailSender;
 
-	public MailController(@Qualifier("smtpMailSender") MailSender mailSender) {
-		this.mailSender = mailSender;
+	public MailController(MailSender smtpMailSender) {
+		this.mailSender = smtpMailSender;
 	}
 
 	@RequestMapping("/mail")
