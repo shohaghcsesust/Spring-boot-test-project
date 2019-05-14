@@ -8,8 +8,13 @@ import com.shohagh.springboottest.mail.MailSender;
 
 @RestController
 public class MailController {
-	@Autowired
+
 	private MailSender mailSender;
+	
+	@Autowired
+	public void setMailSender(MailSender mailSender) {
+		this.mailSender = mailSender;
+	}
 
 	@RequestMapping("/mail")
 	public String mail() {
