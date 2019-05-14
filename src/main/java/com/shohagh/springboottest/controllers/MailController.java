@@ -10,8 +10,8 @@ public class MailController {
 
 	private MailSender mailSender;
 
-	public MailController(MailSender mailSender) {
-		this.mailSender = mailSender;
+	public MailController(MailSender smtpMailSender) {
+		this.mailSender = smtpMailSender;
 	}
 
 	@RequestMapping("/mail")
